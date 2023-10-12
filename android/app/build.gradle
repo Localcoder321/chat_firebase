@@ -23,6 +23,9 @@ if (flutterVersionName == null) {
 }
 
 android {
+    defaultConfig {
+        multiDexEnabled true
+    }
     namespace "dev.localcoder.firebase_chat"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
@@ -64,4 +67,7 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementation 'com.android.support:multidex:2.0.1'
+}
+
