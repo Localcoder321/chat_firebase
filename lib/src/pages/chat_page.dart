@@ -52,17 +52,20 @@ class _ChatPageState extends State<ChatPage> {
       child: Row(
         children: [
           Expanded(
-            child: MyTextField(
-              controller: _messageController,
-              obscureText: false,
-              hintText: "Enter message here...",
+            child: Padding(
+              padding: const EdgeInsets.only(top: 10.0),
+              child: MyTextField(
+                controller: _messageController,
+                obscureText: false,
+                hintText: "Enter message here...",
+              ),
             ),
           ),
           IconButton(
             onPressed: sendMessage,
             icon: const Icon(
               Icons.send_rounded,
-              size: 40,
+              size: 34,
               color: Colors.lightBlue,
             ),
           ),
